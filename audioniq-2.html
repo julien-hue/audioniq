@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AI Matching Progress</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<style type="text/tailwindcss">
+        @keyframes progress-bar {
+            0% {
+                width: 0%;
+            }
+            100% {
+                width: 100%;
+            }
+        }
+        .progress-bar-animation {
+            animation: progress-bar 12s linear forwards;
+        }
+        @keyframes pulse-bg {
+            0%,
+            100% {
+                background-color: var(--pulse-start-color);
+                border-color: var(--pulse-border-start-color);
+            }
+            50% {
+                background-color: var(--pulse-end-color);
+                border-color: var(--pulse-border-end-color);
+            }
+        }
+        @keyframes pulse-text {
+            0%,
+            100% {
+                color: var(--pulse-text-start-color);
+            }
+            50% {
+                color: var(--pulse-text-end-color);
+            }
+        }
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        .animate-spin-slow {
+            animation: spin 1s linear infinite;
+        }
+        .checklist-item {
+            --pulse-start-color: transparent;
+            --pulse-end-color: transparent;
+            --pulse-border-start-color: transparent;
+            --pulse-border-end-color: transparent;
+            --pulse-text-start-color: inherit;
+            --pulse-text-end-color: inherit;
+            opacity: 0.5;
+            transition: opacity 0.5s ease-in-out;
+        }
+        .checklist-item.active {
+            animation: pulse-bg 2s infinite, pulse-text 2s infinite;
+            opacity: 1;
+        }
+        .dark .checklist-item.active {
+            --pulse-start-color: rgba(30, 30, 30, 0);
+            --pulse-end-color: rgba(229, 68, 116, 0.1);
+            --pulse-border-start-color: rgba(229, 68, 116, 0);
+            --pulse-border-end-color: rgba(229, 68, 116, 0.3);
+            --pulse-text-start-color: #E5E7EB;
+            --pulse-text-end-color: #E54474;
+        }
+        .checklist-item.active {
+            --pulse-start-color: #FFFFFF;
+            --pulse-end-color: rgba(229, 68, 116, 0.1);
+            --pulse-border-start-color: #E5E7EB;
+            --pulse-border-end-color: rgba(229, 68, 116, 0.5);
+            --pulse-text-start-color: #1F2937;
+            --pulse-text-end-color: #E54474;
+        }
+        @keyframes checklist-progress {
+            0% {
+                opacity: 0.5;
+            }
+            16.66% {opacity: 1;
+            }
+            33.32% {opacity: 0.5;
+            }
+            100% {
+                opacity: 0.5;
+            }
+        }
+        .item-1 {
+            animation: checklist-progress 12s linear forwards;
+        }
+        .item-2 {
+            animation: checklist-progress 12s linear 2s forwards;
+        }
+        .item-3 {
+            animation: checklist-progress 12s linear 4s forwards;
+        }
+        .item-4 {
+            animation: checklist-progress 12s linear 6s forwards;
+        }
+        .item-5 {
+            animation: checklist-progress 12s linear 8s forwards;
+        }
+        .item-6 {
+            animation: checklist-progress 12s linear 10s forwards;
+        }
+        .item-1.active,
+        .item-2.active,
+        .item-3.active,
+        .item-4.active,
+        .item-5.active,
+        .item-6.active {
+            animation-delay: 0s, 2s, 4s, 6s, 8s, 10s;
+        }
+    </style>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "rgb(229,68,116)",
+                        "background-light": "#FFFFFF",
+                        "background-dark": "#121212",
+                        "surface-light": "#F9FAFB",
+                        "surface-dark": "#1E1E1E",
+                        "text-light": "#1F2937",
+                        "text-dark": "#E5E7EB",
+                        "subtle-light": "#6B7280",
+                        "subtle-dark": "#9CA3AF",
+                        "border-light": "#E5E7EB",
+                        "border-dark": "#374151"
+                    },
+                    fontFamily: {
+                        display: ["Roboto", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                    },
+                },
+            },
+        };
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="flex items-center justify-center min-h-screen">
+<div class="w-full max-w-2xl p-8 space-y-6">
+<ul class="space-y-4" id="checklist">
+<li class="checklist-item flex items-center justify-between p-4 bg-surface-light dark:bg-surface-dark rounded-lg border border-transparent">
+<div class="flex items-center space-x-4">
+<div class="icon-container flex items-center justify-center w-8 h-8 bg-gray-200 dark:bg-gray-700 rounded-full">
+<span class="material-icons text-gray-500 dark:text-gray-400 text-base icon"></span>
+</div>
+<span class="text-container text-text-light dark:text-text-dark">Analyzing brief with AI</span>
+</div>
+</li>
+<li class="checklist-item flex items-center justify-between p-4 bg-surface-light dark:bg-surface-dark rounded-lg border border-transparent">
+<div class="flex items-center space-x-4">
+<div class="icon-container flex items-center justify-center w-8 h-8 bg-gray-200 dark:bg-gray-700 rounded-full">
+<span class="material-icons text-gray-500 dark:text-gray-400 text-base icon"></span>
+</div>
+<span class="text-container text-text-light dark:text-text-dark">Extracting key themes</span>
+</div>
+</li>
+<li class="checklist-item flex items-center justify-between p-4 bg-surface-light dark:bg-surface-dark rounded-lg border border-transparent">
+<div class="flex items-center space-x-4">
+<div class="icon-container flex items-center justify-center w-8 h-8 bg-gray-200 dark:bg-gray-700 rounded-full">
+<span class="material-icons text-gray-500 dark:text-gray-400 text-base icon"></span>
+</div>
+<span class="text-container text-text-light dark:text-text-dark">Scanning podcast inventory</span>
+</div>
+<span class="px-3 py-1 text-xs font-medium text-subtle-light dark:text-subtle-dark bg-gray-100 dark:bg-gray-800 rounded-full">12M+</span>
+</li>
+<li class="checklist-item flex items-center justify-between p-4 bg-surface-light dark:bg-surface-dark rounded-lg border border-transparent">
+<div class="flex items-center space-x-4">
+<div class="icon-container flex items-center justify-center w-8 h-8 bg-gray-200 dark:bg-gray-700 rounded-full">
+<span class="material-icons text-gray-500 dark:text-gray-400 text-base icon"></span>
+</div>
+<span class="text-container text-text-light dark:text-text-dark">Scanning video inventory</span>
+</div>
+<span class="px-3 py-1 text-xs font-medium text-subtle-light dark:text-subtle-dark bg-gray-100 dark:bg-gray-800 rounded-full">500M+</span>
+</li>
+<li class="checklist-item flex items-center justify-between p-4 bg-surface-light dark:bg-surface-dark rounded-lg border border-transparent">
+<div class="flex items-center space-x-4">
+<div class="icon-container flex items-center justify-center w-8 h-8 bg-gray-200 dark:bg-gray-700 rounded-full">
+<span class="material-icons text-gray-500 dark:text-gray-400 text-base icon"></span>
+</div>
+<span class="text-container text-text-light dark:text-text-dark">Scanning article inventory</span>
+</div>
+<span class="px-3 py-1 text-xs font-medium text-subtle-light dark:text-subtle-dark bg-gray-100 dark:bg-gray-800 rounded-full">1B+</span>
+</li>
+<li class="checklist-item flex items-center justify-between p-4 bg-surface-light dark:bg-surface-dark rounded-lg border border-transparent">
+<div class="flex items-center space-x-4">
+<div class="icon-container flex items-center justify-center w-8 h-8 bg-gray-200 dark:bg-gray-700 rounded-full">
+<span class="material-icons text-gray-500 dark:text-gray-400 text-base icon"></span>
+</div>
+<span class="text-container font-medium text-text-light dark:text-text-dark">Ranking results</span>
+</div>
+</li>
+</ul>
+<div class="mt-8">
+<div class="flex justify-between mb-1">
+<span class="text-base font-medium text-subtle-light dark:text-subtle-dark">Progress</span>
+<span class="text-base font-medium text-subtle-light dark:text-subtle-dark" id="progress-text">0%</span>
+</div>
+<div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+<div class="bg-primary h-2 rounded-full progress-bar-animation" id="progress-bar"></div>
+</div>
+</div>
+</div>
+</div>
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const checklistItems = document.querySelectorAll('.checklist-item');
+            const progressBar = document.getElementById('progress-bar');
+            const progressText = document.getElementById('progress-text');
+            const totalItems = checklistItems.length;
+            const animationDuration = 12000; // 12 seconds in milliseconds
+            const itemDuration = animationDuration / totalItems;
+            let activeIndex = 0;
+            function updateChecklist() {
+                checklistItems.forEach((item, index) => {
+                    const iconContainer = item.querySelector('.icon-container');
+                    const icon = item.querySelector('.icon');
+                    const text = item.querySelector('.text-container');
+                    item.classList.remove('active');
+                    item.classList.remove('border-primary/50', 'dark:border-primary/30', 'bg-pink-100/50', 'dark:bg-pink-900/20');
+                    text.classList.remove('text-primary', 'dark:text-pink-400', 'font-medium');
+                    iconContainer.innerHTML = `<span class="material-icons text-gray-500 dark:text-gray-400 text-base icon"></span>`;
+                    if (index < activeIndex) {
+                        // Completed item
+                        item.style.opacity = 1;
+                        iconContainer.innerHTML = '<span class="material-icons text-green-500 dark:text-green-400 text-base">check</span>';
+                        iconContainer.classList.remove('bg-pink-200', 'dark:bg-pink-900/40');
+                        iconContainer.classList.add('bg-green-100', 'dark:bg-green-900/20');
+                    } else if (index === activeIndex) {
+                        // Active item
+                        item.classList.add('active');
+                        item.style.opacity = 1;
+                        text.classList.add('font-medium');
+                        iconContainer.innerHTML = `<div class="w-4 h-4 border-2 border-primary border-t-transparent rounded-full animate-spin-slow"></div>`;
+                        iconContainer.classList.add('bg-pink-200/50', 'dark:bg-pink-900/40');
+                    } else {
+                        // Upcoming item
+                        item.style.opacity = 0.5;
+                        iconContainer.innerHTML = `<span class="material-icons text-gray-500 dark:text-gray-400 text-base icon"></span>`;
+                    }
+                });
+            }
+            function startAnimation() {
+                updateChecklist();
+                const interval = setInterval(() => {
+                    activeIndex++;
+                    if (activeIndex < totalItems) {
+                        updateChecklist();
+                    } else {
+                        clearInterval(interval);
+                        // Final state
+                        checklistItems.forEach((item, index) => {
+                            const iconContainer = item.querySelector('.icon-container');
+                            item.classList.remove('active');
+                            item.style.opacity = 1;
+                            iconContainer.innerHTML = '<span class="material-icons text-green-500 dark:text-green-400 text-base">check</span>';
+                            iconContainer.classList.remove('bg-pink-200/50', 'dark:bg-pink-900/40');
+                            iconContainer.classList.add('bg-green-100', 'dark:bg-green-900/20');
+                        });
+                    }
+                }, itemDuration);
+                let startTime = Date.now();
+                const progressInterval = setInterval(() => {
+                    const elapsedTime = Date.now() - startTime;
+                    const progress = Math.min((elapsedTime / animationDuration) * 100, 100);
+                    progressText.textContent = `${Math.floor(progress)}%`;
+                    if (progress >= 100) {
+                        clearInterval(progressInterval);
+                        progressText.textContent = '100%';
+                        // 👇 ADD THIS LINE
+                        window.location.href = 'audioniq-3.html';
+                    }
+                }, 100);
+            }
+            startAnimation();
+        });
+    </script>
+</body></html>

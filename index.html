@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Audion IQ</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#E95A7E",
+            "background-light": "#FDFBFC",
+            "background-dark": "#121212",
+            "surface-light": "#FFFFFF",
+            "surface-dark": "#1E1E1E",
+            "text-light": "#101010",
+            "text-dark": "#E5E5E5",
+            "subtle-light": "#6B7280",
+            "subtle-dark": "#9CA3AF",
+            "border-light": "#E5E7EB",
+            "border-dark": "#374151"
+          },
+          fontFamily: {
+            display: ["Manrope", "sans-serif"],
+          },
+          borderRadius: {
+            DEFAULT: "0.75rem",
+          },
+        },
+      },
+    };
+  </script>
+<style>
+    body {
+      font-family: 'Manrope', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark">
+<div class="container mx-auto px-4 py-8">
+<header class="flex justify-between items-center mb-16">
+<!-- <img alt="Audion logo" class="h-12" src="https://data.ladn.eu/wp-content/uploads/2023/03/Sans-titre-1343-1024x373.jpg?v=202510"/>-->
+</header>
+<main class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="space-y-8">
+<div>
+<h1 class="text-5xl font-extrabold text-text-light dark:text-text-dark">Audion <span class="text-primary">IQ</span></h1>
+<div class="inline-flex items-center space-x-2 mt-4 px-4 py-2 bg-primary/10 dark:bg-primary/20 text-primary rounded-full">
+<span class="material-icons text-lg">memory</span>
+<span class="text-sm font-medium">Contextual targeting through AI</span>
+</div>
+</div>
+<div class="space-y-4">
+<h2 class="text-4xl font-bold text-text-light dark:text-text-dark">The future of digital audio advertising</h2>
+<p class="text-lg text-subtle-light dark:text-subtle-dark">Our contextual engine powered by AI analyzes and categorizes millions of audio contents to find the perfect contexts to broadcast your advertising message. Reach the most engaged listeners with Audion IQ.</p>
+</div>
+<div>
+<p class="text-sm font-medium text-subtle-light dark:text-subtle-dark mb-4">Available formats:</p>
+<div class="flex flex-wrap gap-3">
+<button class="flex items-center space-x-2 px-4 py-2 border border-border-light dark:border-border-dark rounded-full hover:bg-gray-50 dark:hover:bg-surface-dark transition-colors">
+<span class="material-icons text-primary">podcasts</span>
+<span class="text-sm font-medium">Podcasts</span>
+</button>
+<button class="flex items-center space-x-2 px-4 py-2 border border-border-light dark:border-border-dark rounded-full hover:bg-gray-50 dark:hover:bg-surface-dark transition-colors">
+<span class="material-icons text-primary">smart_display</span>
+<span class="text-sm font-medium">YouTube</span>
+</button>
+<button class="flex items-center space-x-2 px-4 py-2 border border-border-light dark:border-border-dark rounded-full hover:bg-gray-50 dark:hover:bg-surface-dark transition-colors">
+<span class="material-icons text-primary">music_note</span>
+<span class="text-sm font-medium">Music</span>
+</button>
+<button class="flex items-center space-x-2 px-4 py-2 border border-border-light dark:border-border-dark rounded-full hover:bg-gray-50 dark:hover:bg-surface-dark transition-colors">
+<span class="material-icons text-primary">article</span>
+<span class="text-sm font-medium">Text-to-Speech</span>
+</button>
+</div>
+</div>
+<ul class="space-y-3">
+<li class="flex items-center">
+<span class="material-icons text-primary mr-3">check_circle</span>
+<span class="font-medium">Exclusive multi-source inventory</span>
+</li>
+<li class="flex items-center">
+<span class="material-icons text-primary mr-3">check_circle</span>
+<span class="font-medium">Real-time content analysis </span>
+</li>
+<li class="flex items-center">
+<span class="material-icons text-primary mr-3">check_circle</span>
+<span class="font-medium">Performance tracking</span>
+</li>
+</ul>
+</div>
+<div class="bg-surface-light dark:bg-surface-dark p-8 rounded-lg shadow-lg">
+<h2 class="text-2xl font-bold text-text-light dark:text-text-dark">Start your campaign</h2>
+<p class="text-subtle-light dark:text-subtle-dark mt-2 mb-6">Tell us about your target audience and we'll analyze our inventory to find the best content to match your brief.</p>
+<form>
+<div class="space-y-6">
+<div>
+<label class="block text-sm font-medium text-text-light dark:text-text-dark mb-1" for="campaign-brief">Campaign Brief</label>
+<textarea class="block w-full rounded-md border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark shadow-sm focus:border-primary focus:ring-primary sm:text-sm placeholder:text-subtle-light dark:placeholder:text-subtle-dark" id="campaign-brief" name="campaign-brief" placeholder="Describe your product, target audience, and campaign goals..." rows="8"></textarea>
+<p class="mt-2 text-xs text-subtle-light dark:text-subtle-dark">Example: 'Premium meal kit service targeting health-conscious millennials who enjoy cooking shows and food podcasts.'</p>
+</div>
+<button class="w-full bg-primary text-white font-bold py-3 px-4 rounded-md hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary dark:focus:ring-offset-background-dark transition-colors" type="submit"><a href="audioniq-2.html" class="button-link">Search for matching Contents</a></button>
+</div>
+</form>
+<p class="text-center text-xs text-subtle-light dark:text-subtle-dark mt-4">Powered by AI - Scanning 12M+ audio contents in real-time</p>
+</div>
+</main>
+</div>
+
+</body></html>
