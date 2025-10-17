@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Audion IQ</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#E95A7E",
+            "background-light": "#FDFBFC",
+            "background-dark": "#121212",
+            "surface-light": "#FFFFFF",
+            "surface-dark": "#1E1E1E",
+            "text-light": "#101010",
+            "text-dark": "#E5E5E5",
+            "subtle-light": "#6B7280",
+            "subtle-dark": "#9CA3AF",
+            "border-light": "#E5E7EB",
+            "border-dark": "#374151"
+          },
+          fontFamily: {
+            display: ["Manrope", "sans-serif"],
+          },
+          borderRadius: {
+            DEFAULT: "0.75rem",
+          },
+        },
+      },
+    };
+  </script>
+<style>
+    body {
+      font-family: 'Manrope', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark">
+<div class="container mx-auto px-4 py-8">
+<header class="flex justify-between items-center mb-12 h-10"></header>
+<main class="text-center">
+<div class="max-w-4xl mx-auto">
+<h1 class="text-5xl font-extrabold text-text-light dark:text-text-dark">Matching &amp; Discovery of <span class="text-primary">Audion Content</span></h1>
+<p class="text-lg text-subtle-light dark:text-subtle-dark mt-4 max-w-2xl mx-auto">Our AI analyzes millions of content pieces to find the perfect match for your brand. Enter a brief, URL, or keywords to get started.</p>
+</div>
+<div class="mt-12 max-w-3xl mx-auto">
+<div class="relative">
+<textarea class="block w-full rounded-full border-border-light dark:border-border-dark bg-surface-light dark:bg-surface-dark shadow-lg focus:border-primary focus:ring-primary sm:text-sm placeholder:text-subtle-light dark:placeholder:text-subtle-dark py-4 pl-6 pr-32" id="campaign-brief" name="campaign-brief" placeholder="Enter your advertising brief, a URL, or keywords..." rows="1"></textarea>
+<button class="absolute inset-y-0 right-0 flex items-center pr-2" type="submit">
+<span class="bg-primary text-white font-bold py-3 px-6 rounded-full hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary dark:focus:ring-offset-background-dark transition-colors">
+              Discover
+            </span>
+</button>
+</div>
+</div>
+<div class="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto text-left">
+<div class="bg-surface-light dark:bg-surface-dark p-8 rounded-lg shadow-md">
+<div class="flex items-center">
+<span class="material-icons text-primary text-3xl mr-4">auto_awesome</span>
+<h2 class="text-2xl font-bold text-text-light dark:text-text-dark">How the AI Tool Works</h2>
+</div>
+<p class="text-subtle-light dark:text-subtle-dark mt-4">This experimental tool is designed to showcase the power of our matching algorithm. Here's a simplified overview of the process:</p>
+<ul class="space-y-4 mt-6">
+<li class="flex items-start">
+<span class="material-icons text-primary mr-3 mt-1">filter_1</span>
+<div>
+<h3 class="font-semibold">Input Analysis</h3>
+<p class="text-sm text-subtle-light dark:text-subtle-dark">Our LLM processes your natural language brief, URL, or keywords to extract key themes and concepts.</p>
+</div>
+</li>
+<li class="flex items-start">
+<span class="material-icons text-primary mr-3 mt-1">filter_2</span>
+<div>
+<h3 class="font-semibold">Keyword Generation</h3>
+<p class="text-sm text-subtle-light dark:text-subtle-dark">The system generates a comprehensive list of relevant keywords and contextual tags based on the analysis.</p>
+</div>
+</li>
+<li class="flex items-start">
+<span class="material-icons text-primary mr-3 mt-1">filter_3</span>
+<div>
+<h3 class="font-semibold">Content Matching</h3>
+<p class="text-sm text-subtle-light dark:text-subtle-dark">We scan millions of podcasts, YouTube videos, and text-to-speech articles to find content that aligns with your campaign goals.</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="flex flex-col space-y-8">
+<div class="bg-surface-light dark:bg-surface-dark p-6 rounded-lg shadow-md">
+<div class="flex items-center">
+<span class="material-icons text-primary text-3xl mr-4">model_training</span>
+<h3 class="text-xl font-bold">Testing Our AI</h3>
+</div>
+<p class="text-sm text-subtle-light dark:text-subtle-dark mt-2">Your inputs help us refine our models. This is a test environment, so results may vary. We appreciate your feedback!</p>
+</div>
+<div class="bg-surface-light dark:bg-surface-dark p-6 rounded-lg shadow-md">
+<div class="flex items-center">
+<span class="material-icons text-primary text-3xl mr-4">inventory_2</span>
+<h3 class="text-xl font-bold">Our Inventory</h3>
+</div>
+<div class="flex flex-wrap gap-3 mt-3">
+<span class="flex items-center space-x-2 px-3 py-1 bg-gray-100 dark:bg-gray-700 rounded-full text-sm font-medium">
+<span class="material-icons text-primary text-base">podcasts</span>
+<span>Podcasts</span>
+</span>
+<span class="flex items-center space-x-2 px-3 py-1 bg-gray-100 dark:bg-gray-700 rounded-full text-sm font-medium">
+<span class="material-icons text-primary text-base">smart_display</span>
+<span>YouTube</span>
+</span>
+<span class="flex items-center space-x-2 px-3 py-1 bg-gray-100 dark:bg-gray-700 rounded-full text-sm font-medium">
+<span class="material-icons text-primary text-base">article</span>
+<span>Text-to-Speech</span>
+</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>

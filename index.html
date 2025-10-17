@@ -1,115 +1,133 @@
-<!DOCTYPE html>
-<html lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Audion IQ</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
-<script>
-    tailwind.config = {
-      darkMode: "class",
-      theme: {
-        extend: {
-          colors: {
-            primary: "#E95A7E",
-            "background-light": "#FDFBFC",
-            "background-dark": "#121212",
-            "surface-light": "#FFFFFF",
-            "surface-dark": "#1E1E1E",
-            "text-light": "#101010",
-            "text-dark": "#E5E5E5",
-            "subtle-light": "#6B7280",
-            "subtle-dark": "#9CA3AF",
-            "border-light": "#E5E7EB",
-            "border-dark": "#374151"
-          },
-          fontFamily: {
-            display: ["Manrope", "sans-serif"],
-          },
-          borderRadius: {
-            DEFAULT: "0.75rem",
-          },
-        },
-      },
-    };
-  </script>
-<style>
-    body {
-      font-family: 'Manrope', sans-serif;
-    }
-  </style>
-</head>
-<body class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark">
-<div class="container mx-auto px-4 py-8">
-<header class="flex justify-between items-center mb-16">
-<!-- <img alt="Audion logo" class="h-12" src="https://data.ladn.eu/wp-content/uploads/2023/03/Sans-titre-1343-1024x373.jpg?v=202510"/>-->
-</header>
-<main class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-<div class="space-y-8">
-<div>
-<h1 class="text-5xl font-extrabold text-text-light dark:text-text-dark">Audion <span class="text-primary">IQ</span></h1>
-<div class="inline-flex items-center space-x-2 mt-4 px-4 py-2 bg-primary/10 dark:bg-primary/20 text-primary rounded-full">
-<span class="material-icons text-lg">memory</span>
-<span class="text-sm font-medium">Contextual targeting through AI</span>
-</div>
-</div>
-<div class="space-y-4">
-<h2 class="text-4xl font-bold text-text-light dark:text-text-dark">The future of digital audio advertising</h2>
-<p class="text-lg text-subtle-light dark:text-subtle-dark">Our contextual engine powered by AI analyzes and categorizes millions of audio contents to find the perfect contexts to broadcast your advertising message. Reach the most engaged listeners with Audion IQ.</p>
-</div>
-<div>
-<p class="text-sm font-medium text-subtle-light dark:text-subtle-dark mb-4">Available formats:</p>
-<div class="flex flex-wrap gap-3">
-<button class="flex items-center space-x-2 px-4 py-2 border border-border-light dark:border-border-dark rounded-full hover:bg-gray-50 dark:hover:bg-surface-dark transition-colors">
-<span class="material-icons text-primary">podcasts</span>
-<span class="text-sm font-medium">Podcasts</span>
-</button>
-<button class="flex items-center space-x-2 px-4 py-2 border border-border-light dark:border-border-dark rounded-full hover:bg-gray-50 dark:hover:bg-surface-dark transition-colors">
-<span class="material-icons text-primary">smart_display</span>
-<span class="text-sm font-medium">YouTube</span>
-</button>
-<button class="flex items-center space-x-2 px-4 py-2 border border-border-light dark:border-border-dark rounded-full hover:bg-gray-50 dark:hover:bg-surface-dark transition-colors">
-<span class="material-icons text-primary">music_note</span>
-<span class="text-sm font-medium">Music</span>
-</button>
-<button class="flex items-center space-x-2 px-4 py-2 border border-border-light dark:border-border-dark rounded-full hover:bg-gray-50 dark:hover:bg-surface-dark transition-colors">
-<span class="material-icons text-primary">article</span>
-<span class="text-sm font-medium">Text-to-Speech</span>
-</button>
-</div>
-</div>
-<ul class="space-y-3">
-<li class="flex items-center">
-<span class="material-icons text-primary mr-3">check_circle</span>
-<span class="font-medium">Exclusive multi-source inventory</span>
-</li>
-<li class="flex items-center">
-<span class="material-icons text-primary mr-3">check_circle</span>
-<span class="font-medium">Real-time content analysis </span>
-</li>
-<li class="flex items-center">
-<span class="material-icons text-primary mr-3">check_circle</span>
-<span class="font-medium">Performance tracking</span>
-</li>
-</ul>
-</div>
-<div class="bg-surface-light dark:bg-surface-dark p-8 rounded-lg shadow-lg">
-<h2 class="text-2xl font-bold text-text-light dark:text-text-dark">Start your campaign</h2>
-<p class="text-subtle-light dark:text-subtle-dark mt-2 mb-6">Tell us about your target audience and we'll analyze our inventory to find the best content to match your brief.</p>
-<form>
-<div class="space-y-6">
-<div>
-<label class="block text-sm font-medium text-text-light dark:text-text-dark mb-1" for="campaign-brief">Campaign Brief</label>
-<textarea class="block w-full rounded-md border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark shadow-sm focus:border-primary focus:ring-primary sm:text-sm placeholder:text-subtle-light dark:placeholder:text-subtle-dark" id="campaign-brief" name="campaign-brief" placeholder="Describe your product, target audience, and campaign goals..." rows="8"></textarea>
-<p class="mt-2 text-xs text-subtle-light dark:text-subtle-dark">Example: 'Premium meal kit service targeting health-conscious millennials who enjoy cooking shows and food podcasts.'</p>
-</div>
-<button class="w-full bg-primary text-white font-bold py-3 px-4 rounded-md hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary dark:focus:ring-offset-background-dark transition-colors" type="submit"><a href="audioniq-2.html" class="button-link">Search for matching Contents</a></button>
-</div>
-</form>
-<p class="text-center text-xs text-subtle-light dark:text-subtle-dark mt-4">Powered by AI - Scanning 12M+ audio contents in real-time</p>
-</div>
-</main>
-</div>
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link
+      rel="stylesheet"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Inter%3Awght%40400%3B500%3B700%3B900&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900"
+    />
 
-</body></html>
+    <title>Stitch Design</title>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  </head>
+  <body>
+    <div class="relative flex h-auto min-h-screen w-full flex-col bg-slate-50 group/design-root overflow-x-hidden" style='font-family: Inter, "Noto Sans", sans-serif;'>
+      <div class="layout-container flex h-full grow flex-col">
+        <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#e7edf3] px-10 py-3">
+          <div class="flex items-center gap-8">
+            <div class="flex items-center gap-4 text-[#0d141b]">
+              <div class="size-4">
+                <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M44 4H30.6666V17.3334H17.3334V30.6666H4V44H44V4Z" fill="currentColor"></path></svg>
+              </div>
+              <h2 class="text-[#0d141b] text-lg font-bold leading-tight tracking-[-0.015em]">Audion IQ</h2>
+            </div>
+            <div class="flex items-center gap-9">
+              <a class="text-[#0d141b] text-sm font-medium leading-normal" href="#">Home</a>
+              <a class="text-[#0d141b] text-sm font-medium leading-normal" href="#">Campaigns</a>
+              <a class="text-[#0d141b] text-sm font-medium leading-normal" href="#">Analytics</a>
+              <a class="text-[#0d141b] text-sm font-medium leading-normal" href="#">Inventory</a>
+            </div>
+          </div>
+          <div class="flex flex-1 justify-end gap-8">
+            <label class="flex flex-col min-w-40 !h-10 max-w-64">
+              <div class="flex w-full flex-1 items-stretch rounded-lg h-full">
+                <div
+                  class="text-[#4c739a] flex border-none bg-[#e7edf3] items-center justify-center pl-4 rounded-l-lg border-r-0"
+                  data-icon="MagnifyingGlass"
+                  data-size="24px"
+                  data-weight="regular"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                    <path
+                      d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"
+                    ></path>
+                  </svg>
+                </div>
+                <input
+                  placeholder="Search"
+                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#0d141b] focus:outline-0 focus:ring-0 border-none bg-[#e7edf3] focus:border-none h-full placeholder:text-[#4c739a] px-4 rounded-l-none border-l-0 pl-2 text-base font-normal leading-normal"
+                  value=""
+                />
+              </div>
+            </label>
+            <button
+              class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 bg-[#e7edf3] text-[#0d141b] gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5"
+            >
+              <div class="text-[#0d141b]" data-icon="Bell" data-size="20px" data-weight="regular">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                  <path
+                    d="M221.8,175.94C216.25,166.38,208,139.33,208,104a80,80,0,1,0-160,0c0,35.34-8.26,62.38-13.81,71.94A16,16,0,0,0,48,200H88.81a40,40,0,0,0,78.38,0H208a16,16,0,0,0,13.8-24.06ZM128,216a24,24,0,0,1-22.62-16h45.24A24,24,0,0,1,128,216ZM48,184c7.7-13.24,16-43.92,16-80a64,64,0,1,1,128,0c0,36.05,8.28,66.73,16,80Z"
+                  ></path>
+                </svg>
+              </div>
+            </button>
+            <div
+              class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10"
+              style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAUNErfn63_3wOkotOVyvOyZWHYwA_MtncTfdQK5N1B9R5sGzsVsgpQJuKXHIFntrkFYxdr0PrhVHhufFhfYYl1UdWLK0_Su8fWXTUPPvoaNLQe55kAn2NNzyDszZbRr2vp-Dq9eOdqRFS3a83ZuNiBZe4jTDKfwR_UnEN35ebKpNFkG5EbnVLuUXIpCoN9yDKGasUmoC7fpgZv6kyx28rJUIa0LBdaA86JdTPQ951tnA16icpbtLKyged0x3ckkzhCRyo148PsDo9Q");'
+            ></div>
+          </div>
+        </header>
+        <div class="px-40 flex flex-1 justify-center py-5">
+          <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+            <h2 class="text-[#0d141b] tracking-light text-[28px] font-bold leading-tight px-4 text-left pb-3 pt-5">Welcome back, Emily</h2>
+            <div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-4">
+              <div class="flex flex-1 gap-3 rounded-lg border border-[#cfdbe7] bg-slate-50 p-4 flex-col">
+                <div class="text-[#0d141b]" data-icon="Plus" data-size="24px" data-weight="regular">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                    <path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"></path>
+                  </svg>
+                </div>
+                <div class="flex flex-col gap-1"><a href="index-2.html">
+                  <h2 class="text-[#0d141b] text-base font-bold leading-tight">Create Campaign</h2>
+                  <p class="text-[#e54474] text-sm font-normal leading-normal">Launch a new advertising campaign</p>
+                 </a></div>
+              </div>
+              <div class="flex flex-1 gap-3 rounded-lg border border-[#cfdbe7] bg-slate-50 p-4 flex-col">
+                <div class="text-[#0d141b]" data-icon="MagicWand" data-size="24px" data-weight="regular">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                    <path
+                      d="M48,64a8,8,0,0,1,8-8H72V40a8,8,0,0,1,16,0V56h16a8,8,0,0,1,0,16H88V88a8,8,0,0,1-16,0V72H56A8,8,0,0,1,48,64ZM184,192h-8v-8a8,8,0,0,0-16,0v8h-8a8,8,0,0,0,0,16h8v8a8,8,0,0,0,16,0v-8h8a8,8,0,0,0,0-16Zm56-48H224V128a8,8,0,0,0-16,0v16H192a8,8,0,0,0,0,16h16v16a8,8,0,0,0,16,0V160h16a8,8,0,0,0,0-16ZM219.31,80,80,219.31a16,16,0,0,1-22.62,0L36.68,198.63a16,16,0,0,1,0-22.63L176,36.69a16,16,0,0,1,22.63,0l20.68,20.68A16,16,0,0,1,219.31,80Zm-54.63,32L144,91.31l-96,96L68.68,208ZM208,68.69,187.31,48l-32,32L176,100.69Z"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="flex flex-col gap-1"><a href="navigate.html">
+                  <h2 class="text-[#0d141b] text-base font-bold leading-tight">Content Matching</h2>
+                  <p class="text-[#e54474] text-sm font-normal leading-normal">Find content that aligns with your brief</p>
+               </a></div>
+              </div>
+              <div class="flex flex-1 gap-3 rounded-lg border border-[#cfdbe7] bg-slate-50 p-4 flex-col">
+                <div class="text-[#0d141b]" data-icon="ChartLine" data-size="24px" data-weight="regular">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                    <path
+                      d="M232,208a8,8,0,0,1-8,8H32a8,8,0,0,1-8-8V48a8,8,0,0,1,16,0v94.37L90.73,98a8,8,0,0,1,10.07-.38l58.81,44.11L218.73,90a8,8,0,1,1,10.54,12l-64,56a8,8,0,0,1-10.07.38L96.39,114.29,40,163.63V200H224A8,8,0,0,1,232,208Z"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="flex flex-col gap-1">
+                  <h2 class="text-[#0d141b] text-base font-bold leading-tight">Analytics</h2>
+                  <p class="text-[#e54474] text-sm font-normal leading-normal">Track campaign performance and insights</p>
+                </div>
+              </div>
+              <div class="flex flex-1 gap-3 rounded-lg border border-[#cfdbe7] bg-slate-50 p-4 flex-col">
+                <div class="text-[#0d141b]" data-icon="MagnifyingGlass" data-size="24px" data-weight="regular">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                    <path
+                      d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="flex flex-col gap-1">
+                  <h2 class="text-[#0d141b] text-base font-bold leading-tight">Navigate Inventory</h2>
+                  <p class="text-[#e54474] text-sm font-normal leading-normal">Browse and manage available ad inventory</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
